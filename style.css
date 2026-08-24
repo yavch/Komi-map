@@ -1,0 +1,185 @@
+/* ---------- Общие стили ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f0f4f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ---------- Шапка ---------- */
+.header {
+  max-width: 1100px;
+  width: 100%;
+  background: linear-gradient(135deg, #1a3a2b, #2b5e3b);
+  color: #f5f0e6;
+  padding: 28px 30px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 30px rgba(0, 20, 0, 0.3);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.header h1 span {
+  color: #f9d77e;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ---------- Легенда ---------- */
+.legend {
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 40px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.legend-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.legend-dot.winter {
+  background: #5b9bd5;
+}
+
+.legend-dot.spring {
+  background: #7eb873;
+}
+
+.legend-dot.summer {
+  background: #f4b942;
+}
+
+.legend-dot.autumn {
+  background: #c97d4a;
+}
+
+/* ---------- Контейнер карты ---------- */
+.map-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 20, 0, 0.2);
+  border: 3px solid #fff;
+  background: #e8ede8;
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+}
+
+/* ---------- Подвал ---------- */
+.footer {
+  max-width: 1100px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: #ffffffcc;
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #2d3e2d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.footer a {
+  color: #1a5a2b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Адаптивность ---------- */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .legend {
+    gap: 10px 20px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+
+  #map {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 18px 16px;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  #map {
+    height: 350px;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+  }
+}
